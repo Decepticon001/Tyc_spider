@@ -1,0 +1,5 @@
+2018-09-19 17:42:22,199 - 111.py:16 - tst - first info message
+2018-09-19 17:42:22,199 - 111.py:17 - tst - first debug message
+2018-09-19 17:42:45,662 - 111.py:16 - tst - dddddddd
+2018-09-19 17:42:45,662 - 111.py:17 - tst - first debug message
+2018-09-19 17:43:09,094 - 111.py:16 - tst - dfffffffff

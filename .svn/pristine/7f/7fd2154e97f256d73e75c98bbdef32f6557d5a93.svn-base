@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42f027da-b27a-4559-a46e-7d2726f11421" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/comp_log" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tyc" beforeDir="true" afterPath="$PROJECT_DIR$/tyc" afterDir="true" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/get_name_by_city$getxici.coverage" NAME="getxici Coverage Results" MODIFIED="1534405669118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$rrr.coverage" NAME="rrr Coverage Results" MODIFIED="1536045106107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_mq.coverage" NAME="get_mq Coverage Results" MODIFIED="1538273778203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_tyc_by_id.coverage" NAME="get_tyc_by_id Coverage Results" MODIFIED="1536300363457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_name_dianzi.coverage" NAME="get_name_dianzi Coverage Results" MODIFIED="1534752732896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_name_lis.coverage" NAME="get_name_lis Coverage Results" MODIFIED="1534411161531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$text.coverage" NAME="text Coverage Results" MODIFIED="1536046924329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_name.coverage" NAME="get_name Coverage Results" MODIFIED="1536716638232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$gevent_test.coverage" NAME="gevent_test Coverage Results" MODIFIED="1536809835385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_qichacha.coverage" NAME="get_qichacha Coverage Results" MODIFIED="1539673072491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$send_message.coverage" NAME="send_message Coverage Results" MODIFIED="1538117194021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_tianyancha.coverage" NAME="get_tianyancha Coverage Results" MODIFIED="1539828702882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$rabbitMQ_get_name.coverage" NAME="rabbitMQ_get_name Coverage Results" MODIFIED="1538117197744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$test.coverage" NAME="test Coverage Results" MODIFIED="1537951071660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/import_exl" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_dl_ip.coverage" NAME="get_dl_ip Coverage Results" MODIFIED="1539236859370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_tyc.coverage" NAME="get_tyc Coverage Results" MODIFIED="1536300434022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$xml_test.coverage" NAME="xml_test Coverage Results" MODIFIED="1538970113476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/get_qcc" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_ip.coverage" NAME="get_ip Coverage Results" MODIFIED="1539240104051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$tttttt__1_.coverage" NAME="tttttt (1) Coverage Results" MODIFIED="1527562388883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_all_hz.coverage" NAME="get_all_hz Coverage Results" MODIFIED="1539074370093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$proxies.coverage" NAME="proxies Coverage Results" MODIFIED="1539590593763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/file" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$clickxy.coverage" NAME="clickxy Coverage Results" MODIFIED="1534905712080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/seleTest" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$1111.coverage" NAME="1111 Coverage Results" MODIFIED="1533025435780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_repair.coverage" NAME="get_repair Coverage Results" MODIFIED="1537428169494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$huakuaiyanzheng.coverage" NAME="huakuaiyanzheng Coverage Results" MODIFIED="1534901436528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$123.coverage" NAME="123 Coverage Results" MODIFIED="1539329487727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_shuidi.coverage" NAME="get_shuidi Coverage Results" MODIFIED="1539246736215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/get_qcc" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_cookie.coverage" NAME="get_cookie Coverage Results" MODIFIED="1539826646889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_qcc_c_name.coverage" NAME="get_qcc_c_name Coverage Results" MODIFIED="1538982858782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/get_qcc" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$111.coverage" NAME="111 Coverage Results" MODIFIED="1538970270896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/get_qcc" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$to_sql.coverage" NAME="to_sql Coverage Results" MODIFIED="1539756812148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$to_Db.coverage" NAME="to_Db Coverage Results" MODIFIED="1539065045084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/import_exl" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$uni_test.coverage" NAME="uni_test Coverage Results" MODIFIED="1539754637795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/get_qcc" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$login_tyc.coverage" NAME="login_tyc Coverage Results" MODIFIED="1539251777818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/get_qcc" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$pyrequest.coverage" NAME="pyrequest Coverage Results" MODIFIED="1539240753535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/get_name_by_city$begin_qi.coverage" NAME="begin_qi Coverage Results" MODIFIED="1534845071599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$tttttt.coverage" NAME="tttttt Coverage Results" MODIFIED="1526451981818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/get_name_by_city" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_other.coverage" NAME="get_other Coverage Results" MODIFIED="1526899717478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_names3.coverage" NAME="get_names3 Coverage Results" MODIFIED="1536053490273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$get_name1.coverage" NAME="get_name1 Coverage Results" MODIFIED="1536737187040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$sendemil.coverage" NAME="sendemil Coverage Results" MODIFIED="1535528015442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/get_name_by_city$data_to_mq.coverage" NAME="data_to_mq Coverage Results" MODIFIED="1539828460631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-488108900">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="15" />
+          <entry key="py" value="2062" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="Python" value="2062" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="py" value="26" />
+          <entry key="txt" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="26" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-985075086">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="9" />
+          <entry key="project.open.time.4" value="4" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="25" />
+          <entry key="get_ip" value="7" />
+          <entry key="html" value="24" />
+          <entry key="py" value="20223" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="24" />
+          <entry key="PLAIN_TEXT" value="33" />
+          <entry key="Python" value="20223" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="get_ip" value="1" />
+          <entry key="html" value="17" />
+          <entry key="log" value="27" />
+          <entry key="py" value="199" />
+          <entry key="ttx" value="3" />
+          <entry key="txt" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="17" />
+          <entry key="PLAIN_TEXT" value="48" />
+          <entry key="Python" value="199" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_to_mq.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="409" column="40" selection-start-line="409" selection-start-column="40" selection-end-line="409" selection-end-column="40" />
+              <folding>
+                <element signature="e#104#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_qcc/111.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="e#134#143#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_qcc/uni_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1539758607460" expanded="true" signature="147:164" ph="..." />
+                <marker date="1539758607460" expanded="true" signature="189:451" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_cookie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/get_tianyancha.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="1106" selection-start-line="1106" selection-end-line="1106" />
+              <folding>
+                <element signature="e#24#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_qcc/get_tianyancha.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>0xe6</find>
+      <find>鞍山汇通电子元件厂</find>
+      <find>104773</find>
+      <find>105773</find>
+      <find>host</find>
+      <find>case</find>
+      <find>cmap_format_12</find>
+      <find>session</find>
+      <find />
+      <find>proxies=proxy,</find>
+      <find>class=&quot;name</find>
+      <find>pageNum</find>
+      <find>timeout</find>
+      <find>百度高尔夫软件</find>
+      <find>lversion</find>
+      <find>denfjijiguan</find>
+      <find>dengjijiguan</find>
+      <find>print</find>
+      <find>ci</find>
+      <find>legal_proceedings_data</find>
+      <find>impor</find>
+      <find>im_ex_credit</find>
+      <find>jystatus</find>
+      <find>im_ex</find>
+      <find>weixin</find>
+      <find>session.get</find>
+      <find>jyfw</find>
+      <find>'</find>
+      <find>proxies=proxy</find>
+      <find>type</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.txt" />
+        <option value="$PROJECT_DIR$/text.py" />
+        <option value="$PROJECT_DIR$/to_sql1.py" />
+        <option value="$PROJECT_DIR$/sendemil.py" />
+        <option value="$PROJECT_DIR$/cookie.txt" />
+        <option value="$PROJECT_DIR$/get_cookie.py" />
+        <option value="$PROJECT_DIR$/rrr.py" />
+        <option value="$PROJECT_DIR$/file/text.py" />
+        <option value="$PROJECT_DIR$/get_names3.py" />
+        <option value="$PROJECT_DIR$/tttttt.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/get_tyc_by_id.py" />
+        <option value="$PROJECT_DIR$/check_tyc_name.py" />
+        <option value="$PROJECT_DIR$/get_tyc.py" />
+        <option value="$PROJECT_DIR$/get_name1.py" />
+        <option value="$PROJECT_DIR$/repair.py" />
+        <option value="$PROJECT_DIR$/get_name.py" />
+        <option value="$PROJECT_DIR$/gevent_test.py" />
+        <option value="$PROJECT_DIR$/send_message.py" />
+        <option value="$PROJECT_DIR$/get_repair.py" />
+        <option value="$PROJECT_DIR$/import_exl/test.py" />
+        <option value="$PROJECT_DIR$/item.py" />
+        <option value="$PROJECT_DIR$/tyc/data_to_mq.py" />
+        <option value="$PROJECT_DIR$/rabbitMQ_get_name.py" />
+        <option value="$PROJECT_DIR$/file/ips.txt" />
+        <option value="$PROJECT_DIR$/get_mq.py" />
+        <option value="$PROJECT_DIR$/get_qcc/xml_test.py" />
+        <option value="$PROJECT_DIR$/get_qcc/111.py" />
+        <option value="$PROJECT_DIR$/comp_log/logger.log" />
+        <option value="$PROJECT_DIR$/get_qcc/get_qcc_c_name.py" />
+        <option value="$PROJECT_DIR$/file/proxies.py" />
+        <option value="$PROJECT_DIR$/import_exl/to_Db.py" />
+        <option value="$PROJECT_DIR$/file/get_all_hz.py" />
+        <option value="$PROJECT_DIR$/file/proxies.txt" />
+        <option value="$PROJECT_DIR$/file/get_ip" />
+        <option value="$PROJECT_DIR$/file/get_dl_ip.py" />
+        <option value="$PROJECT_DIR$/file/get_ip.py" />
+        <option value="$PROJECT_DIR$/../../pyrequest.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/get_qcc/get_shuidi.py" />
+        <option value="$PROJECT_DIR$/get_qcc/login_tyc.py" />
+        <option value="$PROJECT_DIR$/readfile.py" />
+        <option value="$PROJECT_DIR$/1.html" />
+        <option value="$PROJECT_DIR$/123.py" />
+        <option value="$PROJECT_DIR$/get_qichacha.py" />
+        <option value="$PROJECT_DIR$/to_mq.py" />
+        <option value="$PROJECT_DIR$/to_sql.py" />
+        <option value="$PROJECT_DIR$/get_qcc/uni_test.py" />
+        <option value="$PROJECT_DIR$/get_qcc/get_tianyancha.py" />
+        <option value="$PROJECT_DIR$/data_to_mq.py" />
+        <option value="$PROJECT_DIR$/get_tianyancha.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="9" />
+    <option name="y" value="30" />
+    <option name="width" value="1525" />
+    <option name="height" value="971" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="get_name_by_city" type="b2602c69:ProjectViewProjectNode" />
+              <item name="get_name_by_city" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="get_name_by_city" type="b2602c69:ProjectViewProjectNode" />
+              <item name="get_name_by_city" type="462c0819:PsiDirectoryNode" />
+              <item name="get_qcc" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/seleTest" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/file" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/get_qcc" />
+      <recent name="$PROJECT_DIR$/tyc" />
+      <recent name="$PROJECT_DIR$/file" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/tyc</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/tyc/tyc</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/tyc/tyc/data_to_mq.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/tyc/tyc/get_tianyancha.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/tyc/tyc/item.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/tyc/__MACOSX</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/tyc/__MACOSX/tyc</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/tyc/__MACOSX/tyc/._data_to_mq.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/.idea</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/.idea/inspectionProfiles</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/.idea/spider.iml</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/.idea/modules.xml</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/.idea/misc.xml</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/.idea/vcs.xml</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/.idea/workspace.xml</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/pipelines.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/run_ele.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/tools</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/tools/get_content.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/tools/Get_img.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/tools/time.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/tools/__init__.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/tools/change_time.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/tools/timestamp.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/tools/change_url.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/__init__.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/crawl_all.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/middlewares.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/settings.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/items.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/ET.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/AET.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/eefocus.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/eet.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/__init__.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/ic112.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/eepw.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/elecfans.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/ofweek.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/eeworld.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/cntronics.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/heqw.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/ic37.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/spiders/cena.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/do_ele_jobs.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/Ele_Industry/text.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/1.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/spider/2.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/tyc</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/tyc/data_to_mq.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/tyc/get_tianyancha.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/tyc/item.py</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/__MACOSX</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/__MACOSX/tyc</PATH>
+          <PATH vcs="svn" revision="4">$PROJECT_DIR$/tyc/__MACOSX/tyc/._data_to_mq.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.get_tianyancha">
+    <configuration name="data_to_mq" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="get_name_by_city" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_to_mq.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_cookie" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="get_name_by_city" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_cookie.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_tianyancha" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="get_name_by_city" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_tianyancha.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="to_sql" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="get_name_by_city" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/to_sql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="uni_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="get_name_by_city" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/get_qcc" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_qcc/uni_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.data_to_mq" />
+      <item itemvalue="Python.get_tianyancha" />
+      <item itemvalue="Python.get_cookie" />
+      <item itemvalue="Python.uni_test" />
+      <item itemvalue="Python.to_sql" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.get_tianyancha" />
+        <item itemvalue="Python.data_to_mq" />
+        <item itemvalue="Python.get_cookie" />
+        <item itemvalue="Python.to_sql" />
+        <item itemvalue="Python.uni_test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42f027da-b27a-4559-a46e-7d2726f11421" name="Default" comment="" />
+      <created>1526276817935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526276817935</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="9" y="30" width="1525" height="971" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49668875" visible="true" weight="0.22319622" />
+      <window_info id="Structure" order="1" sideWeight="0.5033113" side_tool="true" weight="0.2553325" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32798165" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.3993174" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.32454127" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32798165" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49937266" weight="0.3265074" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5012547" side_tool="true" weight="0.38761467" />
+      <window_info anchor="bottom" content_ui="combo" x="67" y="518" width="1594" height="484" id="Run" order="12" sideWeight="0.4987453" visible="true" weight="0.40386802" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32912844" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/repair.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BitFontCreator/High-Logic FontCreator/WOFFTest/wofftest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1278" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/threadpool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tyc/item.py" />
+    <entry file="file://$PROJECT_DIR$/item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tyc/get_tianyancha.py" />
+    <entry file="file://$PROJECT_DIR$/tyc/data_to_mq.py" />
+    <entry file="file://$PROJECT_DIR$/check_tyc_name.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookie.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="910" lean-forward="true" selection-end-column="1046" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/tst.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../tyc-num.ttx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="905" column="21" selection-start-line="905" selection-start-column="21" selection-end-line="905" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/xml_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/logger.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comp_log/logger.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/import_exl/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="228" column="32" selection-start-line="228" selection-start-column="13" selection-end-line="228" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comp_log/comp.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6915">
+          <caret line="461" column="97" selection-start-line="461" selection-start-column="97" selection-end-line="461" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/import_exl/to_Db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/Proxy-IP.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/get_all_hz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="27" column="58" lean-forward="true" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+          <folding>
+            <element signature="e#68#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/stomp/transport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/events.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="218" column="8" selection-start-line="218" selection-start-column="8" selection-end-line="218" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/get_ip">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/proxies.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../pyrequest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_repair.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="65" selection-start-line="65" selection-end-line="73" selection-end-column="12" />
+          <folding>
+            <element signature="e#2#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getmd5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1883">
+          <caret line="1013" column="94" selection-start-line="1013" selection-start-column="83" selection-end-line="1013" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#89597#89603#0" expanded="true" />
+            <element signature="e#114503#114509#0" expanded="true" />
+            <element signature="e#114509#114515#0" expanded="true" />
+            <element signature="e#114515#114521#0" expanded="true" />
+            <element signature="e#114521#114527#0" expanded="true" />
+            <element signature="e#114527#114533#0" expanded="true" />
+            <element signature="e#114533#114539#0" expanded="true" />
+            <element signature="e#114539#114545#0" expanded="true" />
+            <element signature="e#114578#114584#0" expanded="true" />
+            <element signature="e#114617#114623#0" expanded="true" />
+            <element signature="e#114868#114874#0" expanded="true" />
+            <element signature="e#114908#114914#0" expanded="true" />
+            <element signature="e#115139#115145#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#4;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#117224#117230#1" expanded="true" />
+            <element signature="e#117320#117326#1" expanded="true" />
+            <element signature="e#117351#117357#0" expanded="true" />
+            <element signature="e#117378#117384#0" expanded="true" />
+            <element signature="e#117517#117523#1" expanded="true" />
+            <element signature="e#117624#117630#1" expanded="true" />
+            <element signature="e#117857#117863#0" expanded="true" />
+            <element signature="e#117876#117882#0" expanded="true" />
+            <element signature="e#117895#117901#0" expanded="true" />
+            <element signature="e#117925#117931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitMQ_get_name.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="61" selection-end-line="66" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/proxies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qichacha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/to_mq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/123.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="50" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="28" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/tm.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/login_tyc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/get_shuidi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="121" column="50" lean-forward="true" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="50" />
+          <folding>
+            <element signature="e#24#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/get_qcc_c_name.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/get_dl_ip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/get_ip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/ips.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_connect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/to_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/111.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#134#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/uni_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1539758607460" expanded="true" signature="147:164" ph="..." />
+            <marker date="1539758607460" expanded="true" signature="189:451" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_qcc/get_tianyancha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_cookie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_to_mq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="409" column="40" selection-start-line="409" selection-start-column="40" selection-end-line="409" selection-end-column="40" />
+          <folding>
+            <element signature="e#104#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_tianyancha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="1106" selection-start-line="1106" selection-end-line="1106" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

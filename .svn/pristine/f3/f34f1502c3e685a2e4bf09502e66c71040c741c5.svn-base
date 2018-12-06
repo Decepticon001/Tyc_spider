@@ -1,0 +1,977 @@
+# -*- coding: utf-8 -*-
+import datetime
+import random
+import requests
+from lxml import etree
+from item import Item
+from pandas.core.frame import DataFrame
+import json
+
+
+class Tianyancah:
+    name = ''
+    n = 1
+
+
+
+    def __init__(self,name):
+        self.name = name
+        headers = {
+            'Host': 'www.tianyancha.com',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+            'Cache-Control': 'max-age=0',
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+            'Accept-Encoding': 'gzip, deflate, br',
+            # 'Referer': 'https://www.tianyancha.com/',
+            # 'Referer': 'https://www.baidu.com/link?url=aaadddda',
+            'Referer':'https://www.baidu.com/link?url=YLvTSuGhlTTvDeRvaJRxwcaZoZfouCq406ty7U_pGKfk9s9Q3iZlqgRhBnchaodzuBpwSzl47wKgPW1jicIoNa&wd=&eqid=e989465400038d08000000065b8f2dd8',
+            'Cache-Control': 'max-age=0',
+        }
+
+        cookies = {'TYCID': '6cf27140b4d211e8957513e011ebbde4', ' undefined': '6cf27140b4d211e8957513e011ebbde4', ' ssuid': '3108248350', ' _ga': 'GA1.2.1978558396.1536567652', ' jsid': 'SEM-BAIDU-CG-SY-002185', ' _gid': 'GA1.2.994904320.1537341184', ' RTYCID': '0fb8d1ff641544a78c82210e56b31288', ' CT_TYCID': 'ee9a9ef0d907441399ec0bfc5bb718e8', ' aliyungf_tc': 'AQAAABmVyGhv8QEAmjr2OkF62TDddXWF', ' csrfToken': 'iBpm3XdmsQHFQYwHxKrfuOEO', ' Hm_lvt_e92c8d65d92d534b0fc290df538b4758': '1537425792,1537425796,1537426501,1537426508', ' tyc-user-info': '%257B%2522token%2522%253A%2522eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODAxNzc0MTE3MCIsImlhdCI6MTUzNzQyNjU5NCwiZXhwIjoxNTUyOTc4NTk0fQ.EJezAdurZHjmy3NulnKQjNmok6QPzz6GgFjWnjFEtPub9-E37VfPbnewfI2-T5UAmM0vSf8XBz4WI3UQL4gyPg%2522%252C%2522integrity%2522%253A%25220%2525%2522%252C%2522state%2522%253A%25220%2522%252C%2522redPoint%2522%253A%25220%2522%252C%2522vipManager%2522%253A%25220%2522%252C%2522vnum%2522%253A%25220%2522%252C%2522monitorUnreadCount%2522%253A%25228%2522%252C%2522onum%2522%253A%25220%2522%252C%2522mobile%2522%253A%252218017741170%2522%257D', ' auth_token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxODAxNzc0MTE3MCIsImlhdCI6MTUzNzQyNjU5NCwiZXhwIjoxNTUyOTc4NTk0fQ.EJezAdurZHjmy3NulnKQjNmok6QPzz6GgFjWnjFEtPub9-E37VfPbnewfI2-T5UAmM0vSf8XBz4WI3UQL4gyPg', ' cloud_token': '063dda25f57a4b969a58d39ed27620ec', ' Hm_lpvt_e92c8d65d92d534b0fc290df538b4758': '1537426635'}
+        # cookies = {'TYCID': '699463d0479211e8a2baf1c59485c035', ' undefined': '699463d0479211e8a2baf1c59485c035',
+        #            ' ssuid': '4343645724', ' _ga': 'GA1.2.315444768.1531900251', ' jsid': 'SEM-BAIDU-PP-SY-000257',
+        #            ' aliyungf_tc': 'AQAAADQJgGoX9wkAmjr2Om4Xic8BfkMl', ' csrfToken': 'bYVVSjjLwZWHkOl3Gpv_goED',
+        #            ' token': 'a0d7a7dfd7c74cf5bfa2418d086be058', ' _utm': 'c23d76f505bf4539a74479a144554719',
+        #            ' _gid': 'GA1.2.1190140784.1535936900', ' RTYCID': '3150f1a03a7d4b499215b4f208622c9b',
+        #            ' CT_TYCID': 'e8c56c8c30534af3b99da05339a922f9',
+        #            ' Hm_lvt_e92c8d65d92d534b0fc290df538b4758': '1535973906,1535974043,1535974098,1535977129',
+        #            ' Hm_lpvt_e92c8d65d92d534b0fc290df538b4758': '1535977129',
+        #            ' cloud_token': '605f4f923a4b473a8b8b561570bd310f', ' cloud_utm': '69fa7577979d4fa99f6aa73f3afe765d',
+        #            ' _gat_gtag_UA_123487620_1': '1'}
+        self.session = requests.session()
+        self.session.headers = headers
+        requests.utils.add_dict_to_cookiejar(self.session.cookies, cookies)
+
+    def get_pro(self):
+        with open('file/ips.txt', 'r', encoding='utf-8') as f:
+            list1 = f.readlines()
+        ip = random.choice(list1).strip()
+        # ip = '221.230.216.29:26027'
+        # print(ip)
+        proxy = {
+            'http': '%s' % ip,
+            'https': '%s' % ip
+        }
+        return proxy
+
+    def get_list(self):
+        item = Item()
+        url = "https://www.tianyancha.com/search?key=%s"%(self.name)
+        proxy = self.get_pro()
+        response = self.session.get(url,proxies=proxy,timeout=10)
+        # response = self.session.get(url, timeout=10)
+        # ,proxies=proxy
+        html = response.text
+        selector = etree.HTML(html)
+        flag =  selector.xpath('//div[@class="f24 mb40 mt40 sec-c1 "]/text()')
+        # print(flag)
+        try:
+            if flag[0] == '抱歉，没有找到相关结果！':
+                item.name = self.name
+                item.product = 'Null'
+                item.keyword = 'Null'
+                item.compat = 'Null'
+                return item
+        except:
+            pass
+        u = selector.xpath('//div[@class="search-result-single "]/div[@class="content"]/div/a/@href')[0]
+        item = self.get_info(u,proxy)
+        # print(u)
+        return item
+        # print(u)
+
+    def get_info(self,url,proxy):
+        item = Item()
+        item.name = self.name
+        company_id = url[35:]
+        response = self.session.get(url,proxies=proxy,timeout=10)
+        # response = self.session.get(url, timeout=10)
+        # ,proxies=proxy
+        html = response.text
+        item = self.get_other(html,item,proxy)
+        selector = etree.HTML(html)
+        product = selector.xpath('//div[@id="_container_product"]/table/tbody/tr/td[3]/span/text()')
+        # print(product)
+        # n_page = selector.xpath("//div[@id='_container_product']/div/div/div[@class='company_pager']/ul[@class='pagination-sm pagination']/li/a/@onclick")[-1]
+        # pages = selector.xpath('//div[@id="_container_product"]/div[@class="company_pager"]/ul[@class="pagination"]/li/a[@class="num -end"]/text()')
+        # print(pages)
+        #
+        # if pages:
+        #     pages = int(pages[0][3:])
+        #     product = self.hasnext(pages,company_id)+product
+        # print(product)
+
+        if product:
+            item.product = str(product)[1:-1].replace("'",'')
+        else:
+            item.product = ""
+        jingpin = selector.xpath('//div[@id="_container_jingpin"]/div/table/tbody/tr/td[2]/table/tr/td[2]/a/text()')
+        if jingpin:
+            item.compat = str(jingpin)[1:-1].replace("'",'')
+        else:
+            item.compat = ""
+        u = selector.xpath('//div[@class="item"]/a/@href')
+        if u:
+            u = u[0]
+        else:
+            item.keyword = ""
+            return item
+        response = self.session.get(u,proxies=proxy,timeout=10)
+        # response = self.session.get(u, timeout=10)
+        # ,proxies=proxy
+        html = response.text
+        selector = etree.HTML(html)
+        keyword = selector.xpath("//div[@class='content']/div[3]/a/text()")
+        # print(keyword)
+        if keyword:
+            item.keyword = str(keyword)[1:-1].replace("'",'')
+        else:
+            item.keyword = ""
+        return item
+
+    def hasnext(self,pages,id):
+        list_product = []
+        for i in range(2,pages+1):
+            url = 'https://www.tianyancha.com/pagination/product.xhtml?ps=5&pn=%s&id=%s'%(str(i),id)
+            response = self.session.get(url)
+            html = response.text
+            selector = etree.HTML(html)
+            products = selector.xpath("//table[@class='lazy-img   -text -w36']/tbody/tr/td[2]/span/text()")
+            list_product = list_product+products
+        return list_product
+
+    def get_other(self,html,item,proxy):
+        selector = etree.HTML(html)
+        faren = selector.xpath('//*[@id="_container_baseInfo"]/table[1]/tbody/tr[1]/td[1]/div/div[1]/div[2]/div[1]/a/text()')
+        phone = selector.xpath('//*[@id="company_web_top"]/div[2]/div[2]/div[5]/div[1]/div[1]/span[2]/text()')
+        email = selector.xpath('//*[@id="company_web_top"]/div[2]/div[2]/div[5]/div[1]/div[2]/span[2]/text()')
+        guanwang = selector.xpath('//*[@id="company_web_top"]/div[2]/div[2]/div[5]/div[2]/div[1]/a/text()')
+        dizhi = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[8]/td[2]/text()')
+        gongshangzhuce = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[1]/td[2]/text()')
+        zuzhijigoudaima = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[1]/td[4]/text()')
+        tongyixinyongdaima = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[2]/td[2]/text()')
+        comp_type = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[2]/td[4]/text()')
+        hangye = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[3]/td[4]/text()')
+        # jyfw =selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[9]/td[2]/span/span/span/text/text()')
+        # if jyfw == '':
+        jyfw  = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[9]/td[2]/span/span/span/text()')
+
+        zhucedizhi = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[8]/td[2]/text()')
+        dengjijiguan = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[6]/td[4]/text()')
+        yingwenming = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[7]/td[4]/text()')
+        jianjie = selector.xpath('//script[@id="company_base_info_detail"]/text()')
+        item.jianjie = ""
+        product_des = selector.xpath("//div[@id='_container_desc']/text()")
+        regtm = selector.xpath('//*[@id="_container_baseInfo"]/table[2]/tbody/tr[4]/td[2]/span/text()')
+        regtm = str(regtm)[2:-2]
+
+        main_per_data = DataFrame()
+        try:
+            main_per_name = selector.xpath('//*[@id="_container_staff"]/div/table/tbody/tr/td[2]/div/a[1]/text()')
+            ma = selector.xpath('//*[@id="_container_staff"]/div/table/tbody/tr/td[3]')
+            main_per_posit = []
+            for m in ma:
+                main_per_posit.append(m.xpath('string(.)').strip())
+            main_per = {
+                'main_per_name': main_per_name,
+                'main_per_posit': main_per_posit
+            }
+            main_per_data = DataFrame(main_per)
+        except:
+            pass
+        item.main_per_data = main_per_data
+
+        share_data = DataFrame()
+        try:
+            share_name = selector.xpath('//*[@id="_container_holder"]/table/tbody/tr/td[2]/div/div[2]/a/text()')
+            share_proportion = selector.xpath('//*[@id="_container_holder"]/table/tbody/tr/td[3]/div/div/span/text()')
+            share_contributive = selector.xpath('//*[@id="_container_holder"]/table/tbody/tr/td[4]/div/span/text()')
+            share_contributive_tm = selector.xpath('//*[@id="_container_holder"]/table/tbody/tr/td[5]/div/span/text()')
+            share = {
+                'share_name': share_name,
+                'share_proportion': share_proportion,
+                'share_contributive': share_contributive,
+                'share_contributive_tm': share_contributive_tm
+            }
+            share_data = DataFrame(share)
+        except:
+            pass
+        item.share_data = share_data
+
+        invest_data = DataFrame()
+        try:
+            name = selector.xpath('//*[@id="_container_invest"]/table/tbody/tr/td[2]/table/tr/td[2]/a/text()')
+            btzper = selector.xpath('//*[@id="_container_invest"]/table/tbody/tr/td[3]/span/a/text()')
+            reg_zb = selector.xpath('//*[@id="_container_invest"]/table/tbody/tr/td[4]/span/text()')
+            invest_bl = selector.xpath('//*[@id="_container_invest"]/table/tbody/tr/td[5]/span/text()')
+            reg_tm = selector.xpath('//*[@id="_container_invest"]/table/tbody/tr/td[6]/span/text()')
+            status = selector.xpath('//*[@id="_container_invest"]/table/tbody/tr/td[7]/span/text()')
+            invest = {
+                'name_corp': name,
+                'btzper': btzper,
+                'reg_zb': reg_zb,
+                'invest_bl': invest_bl,
+                'reg_tm': reg_tm,
+                'status': status
+            }
+            invest_data = DataFrame(invest)
+        except:
+            pass
+        item.invest_data=invest_data
+
+        fenzhi_data = DataFrame()
+        try:
+            corp_name = selector.xpath('//*[@id="_container_branch"]/table/tbody/tr/td[2]/table/tr/td[2]/a/text()')
+            fzren = selector.xpath('//*[@id="_container_branch"]/table/tbody/tr/td[3]/span/text()')
+            reg_time = selector.xpath('//*[@id="_container_branch"]/table/tbody/tr/td[4]/span/text()')
+            fz_status = selector.xpath('//*[@id="_container_branch"]/table/tbody/tr/td[5]/span/text()')
+            fenzhi = {
+                'corp_name': corp_name,
+                'fzren': fzren,
+                'reg_time': reg_time,
+                'fz_status': fz_status
+            }
+            fenzhi_data = DataFrame(fenzhi)
+        except:
+            pass
+        item.fenzhi_data = fenzhi_data
+
+        biangengqian = selector.xpath('//*[@id="_container_changeinfo"]/table/tbody/tr/td[4]/div')
+        biangengqian_li = []
+        for i in biangengqian:
+            i2 = i.xpath("string(.)")
+            biangengqian_li.append(i2)
+        biangenghou = selector.xpath('//*[@id="_container_changeinfo"]/table/tbody/tr/td[5]/div')
+        biangenghou_li = []
+        for r in biangenghou:
+            r2 = r.xpath("string(.)")
+            biangenghou_li.append(r2)
+        change_data = DataFrame()
+        try:
+            change_tm = selector.xpath('//*[@id="_container_changeinfo"]/table/tbody/tr/td[2]/text()')
+            change_project = selector.xpath('//*[@id="_container_changeinfo"]/table/tbody/tr/td[3]/text()')
+            change_be = biangengqian_li
+            change_af = biangenghou_li
+            change = {
+                'change_tm': change_tm,
+                'change_project': change_project,
+                'change_be': change_be,
+                'change_af': change_af
+            }
+            change_data = DataFrame(change)
+        except:
+            pass
+        item.change_data = change_data
+
+        Judicial_risk_data = DataFrame()
+        try:
+            hold_court_tm = selector.xpath('//*[@id="_container_announcementcourt"]/table/tbody/tr/td[2]/text()')
+            Case = selector.xpath('//*[@id="_container_announcementcourt"]/table/tbody/tr/td[3]/span/text()')
+            person = selector.xpath('//*[@id="_container_announcementcourt"]/table/tbody/tr/td[4]/div')
+            per = []
+            for i in person:
+                r = i.xpath('string(.)')
+                per.append(r)
+            beigaoren = selector.xpath('//*[@id="_container_announcementcourt"]/table/tbody/tr/td[5]')
+            bgr = []
+            for i in beigaoren:
+                r = i.xpath('string(.)')
+                bgr.append(r)
+            Judicial_risk = {
+                'hold_court_tm': hold_court_tm,
+                'Case': Case,
+                'person': per,
+                'bgr': bgr
+            }
+            Judicial_risk_data = DataFrame(Judicial_risk)
+        except:
+            pass
+        item.Judicial_risk_data = Judicial_risk_data
+
+        legal_proceedings_data = DataFrame()
+        try:
+            tm = selector.xpath('//*[@id="_container_lawsuit"]/table/tbody/tr/td[2]/span/text()')
+            documents = selector.xpath('//*[@id="_container_lawsuit"]/table/tbody/tr/td[3]/a/text()')
+            case = selector.xpath('//*[@id="_container_lawsuit"]/table/tbody/tr/td[4]/span/text()')
+            Case_identity = selector.xpath('//*[@id="_container_lawsuit"]/table/tbody/tr/td[5]')
+            ci = []
+            for i in Case_identity:
+                r = i.xpath('string(.)')
+                ci.append(r)
+            case_num = selector.xpath('//*[@id="_container_lawsuit"]/table/tbody/tr/td[6]/span/text()')
+            legal_proceedings = {
+                'tm': tm,
+                'documents': documents,
+                'case': case,
+                'ci': ci,
+                'case_num': case_num
+            }
+            legal_proceedings_data = DataFrame(legal_proceedings)
+        except:
+            pass
+        item.legal_proceedings_data=legal_proceedings_data
+
+        announcement_data = DataFrame()
+        try:
+            tm = selector.xpath('//*[@id="_container_court"]/table/tbody/tr/td[2]/text()')
+            shangsufang = selector.xpath('//*[@id="_container_court"]/table/tbody/tr/td[3]/span')
+            ssf = []
+            for i in shangsufang:
+                r = i.xpath('string(.)')
+                ssf.append(r)
+            beisufang = selector.xpath('//*[@id="_container_court"]/table/tbody/tr/td[4]/span')
+            bsf = []
+            for i in beisufang:
+                r = i.xpath('string(.)')
+                bsf.append(r)
+            beigaoleixing = selector.xpath('//*[@id="_container_court"]/table/tbody/tr/td[5]/span/text()')
+            court = selector.xpath('//*[@id="_container_court"]/table/tbody/tr/td[6]/span/text()')
+            announcement = {
+                'tm': tm,
+                'ssf': ssf,
+                'bsf': bsf,
+                'beigaoleixing': beigaoleixing,
+                'court': court
+            }
+            announcement_data = DataFrame(announcement)
+        except:
+            pass
+        item.announcement_data = announcement_data
+
+        Business_data = DataFrame()
+        try:
+            business_name = selector.xpath('//*[@id="_container_firmProduct"]/div/a[@class="product"]/div[@class="content"]/div[@class="title"]/text()')
+            type = selector.xpath('//*[@id="_container_firmProduct"]/div/a/div[2]/div[@class="tag tag-new-category"]/text()')
+            desc = selector.xpath('//*[@id="_container_firmProduct"]/div/a/div[2]/div[@class="desc"]/text()')
+            busin_url = selector.xpath('//*[@id="_container_firmProduct"]/div/a[@class="product"]/@onclick')
+            bus_keywords = []
+            bus_des = []
+            reg_tm = []
+            Territoriality = []
+            for u in busin_url:
+                l = u[10:-2].split(",")[0][1:-1]
+                url = "https://www.tianyancha.com/brand/%s" % (l)
+                res1 = self.session.get(url,proxies=proxy,timeout=10).text
+                # res1 = self.session.get(url, timeout=10).text
+                # ,proxies=proxy
+                se = etree.HTML(res1)
+                keywords = se.xpath('//div[@class="tags"]/a/text()')
+                keywords = str(keywords)[1:-1].replace("'", '')
+                bus_keywords.append(keywords)
+                reg_time = se.xpath('//span[@class="info"]/text()')[0].split('：')[1]
+                reg_tm.append(reg_time)
+                ter = se.xpath('//span[@class="info"]/text()')[1].split('：')[1]
+                Territoriality.append(ter)
+                des = se.xpath('//*[@id="_container_desc"]/text()')[0]
+                bus_des.append(des)
+            business = {
+                'business_name': business_name,
+                'type': type,
+                'desc': desc,
+                'bus_keywords': bus_keywords,
+                'bus_des': bus_des,
+                'reg_tm': reg_tm,
+                'Territoriality': Territoriality
+            }
+            Business_data = DataFrame(business)
+        except:
+            pass
+        item.Business_data = Business_data
+
+        inve_event_data = DataFrame()
+        try:
+            tm = selector.xpath('//*[@id="_container_touzi"]/table/tbody/tr/td[2]/text()')
+            lunci = selector.xpath('//*[@id="_container_touzi"]/table/tbody/tr/td[3]/text()')
+            jine = selector.xpath('//*[@id="_container_touzi"]/table/tbody/tr/td[4]/text()')
+            touzifang = selector.xpath('//*[@id="_container_touzi"]/table/tbody/tr/td[5]')
+            tzf = []
+            for n in touzifang:
+                t = n.xpath('string(.)')
+                tzf.append(t)
+            product = selector.xpath('//*[@id="_container_touzi"]/table/tbody/tr/td[6]/table/tr/td[2]/a/text()')
+            diqu = selector.xpath('//*[@id="_container_touzi"]/table/tbody/tr/td[7]/text()')
+            ins = selector.xpath('//*[@id="_container_touzi"]/table/tbody/tr/td[8]/a/text()')
+            busi = selector.xpath('//*[@id="_container_touzi"]/table/tbody/tr/td[9]/text()')
+            inve_event = {
+                'tm': tm,
+                'lunci': lunci,
+                'jine': jine,
+                'tzf': tzf,
+                'product': product,
+                'diqu': diqu,
+                'ins': ins,
+                'busi': busi,
+            }
+            inve_event_data = DataFrame(inve_event)
+        except:
+            pass
+        item.inve_event_data = inve_event_data
+
+        Financing_data = DataFrame()
+        try:
+            tm = selector.xpath('//*[@id="_container_rongzi"]/table/tbody/tr/td[2]/text()')
+            rotation = selector.xpath('//*[@id="_container_rongzi"]/table/tbody/tr/td[3]/text()')
+            valuation = selector.xpath('//*[@id="_container_rongzi"]/table/tbody/tr/td[4]/text()')
+            Amount_of_money = selector.xpath('//*[@id="_container_rongzi"]/table/tbody/tr/td[5]/text()')
+            bili = selector.xpath('//*[@id="_container_rongzi"]/table/tbody/tr/td[6]/text()')
+            Investor = selector.xpath('//*[@id="_container_rongzi"]/table/tbody/tr/td[7]')
+            Investors = []
+            for i in Investor:
+                r = i.xpath('string(.)')
+                Investors.append(r)
+            newsly = selector.xpath('//*[@id="_container_rongzi"]/table/tbody/tr/td[8]')
+            newslys = []
+            for i in newsly:
+                r = i.xpath('string(.)')
+                newslys.append(r)
+            Financing = {
+                'tm':tm,
+                'rotation': rotation,
+                'valuation': valuation,
+                'Amount_of_money': Amount_of_money,
+                'bili': bili,
+                'Investors': Investors,
+                'newslys': newslys
+            }
+            Financing_data = DataFrame(Financing)
+        except:
+            pass
+        item.Financing_data = Financing_data
+
+        administrative_licensing_data = DataFrame()
+        try:
+            xukebianhao = selector.xpath('//*[@id="_container_licensing"]/table/tbody/tr/td[2]/text()')
+            xukename = selector.xpath('//*[@id="_container_licensing"]/table/tbody/tr/td[3]/text()')
+            youxiaoqizi = selector.xpath('//*[@id="_container_licensing"]/table/tbody/tr/td[4]/text()')
+            youxiaoqizhi = selector.xpath('//*[@id="_container_licensing"]/table/tbody/tr/td[5]/text()')
+            xukejiguan = selector.xpath('//*[@id="_container_licensing"]/table/tbody/tr/td[6]/text()')
+            xukeneirong = selector.xpath('//*[@id="_container_licensing"]/table/tbody/tr/td[7]/text()')
+            administrative_licensing = {
+                'xukebianhao': xukebianhao,
+                'xukename': xukename,
+                'youxiaoqizi': youxiaoqizi,
+                'youxiaoqizhi': youxiaoqizhi,
+                'xukejiguan': xukejiguan,
+                'xukeneirong': xukeneirong,
+            }
+            administrative_licensing_data = DataFrame(administrative_licensing)
+        except:
+            pass
+        item.administrative_licensing_data = administrative_licensing_data
+
+        Tax_data = DataFrame()
+        try:
+            tm = selector.xpath('//*[@id="_container_taxcredit"]/table/tbody/tr/td[2]/text()')
+            tax_rating = selector.xpath('//*[@id="_container_taxcredit"]/table/tbody/tr/td[3]/text()')
+            type = selector.xpath('//*[@id="_container_taxcredit"]/table/tbody/tr/td[4]/text()')
+            Taxpayer_id = selector.xpath('//*[@id="_container_taxcredit"]/table/tbody/tr/td[5]/text()')
+            evaluation_unit = selector.xpath('//*[@id="_container_taxcredit"]/table/tbody/tr/td[6]/text()')
+            tax = {
+                'tm': tm,
+                'tax_rating': tax_rating,
+                'type': type,
+                'Taxpayer_id': Taxpayer_id,
+                'evaluation_unit': evaluation_unit
+            }
+            Tax_data = DataFrame(tax)
+        except:
+            pass
+        item.Tax_data = Tax_data
+
+        Qualification_certificate = DataFrame()
+        try:
+            certificate = selector.xpath('//*[@id="_container_certificate"]/table/tbody/tr/td[2]/span/text()')
+            certificate_id = selector.xpath('//*[@id="_container_certificate"]/table/tbody/tr/td[3]/span/text()')
+            fazhengriqi = selector.xpath('//*[@id="_container_certificate"]/table/tbody/tr/td[4]/span/text()')
+            jiezhiriqi = selector.xpath('//*[@id="_container_certificate"]/table/tbody/tr/td[5]/span/text()')
+            Qualification = {
+                'certificate': certificate,
+                'certificate_id': certificate_id,
+                'fazhengriqi': fazhengriqi,
+                'jiezhiriqi': jiezhiriqi
+            }
+            Qualification_certificate = DataFrame(Qualification)
+        except:
+            pass
+        item.Qualification_certificate = Qualification_certificate
+
+        Bidding_data = DataFrame()
+        try:
+            tm = selector.xpath('//*[@id="_container_bid"]/table/tbody/tr/td[2]/text()')
+            title = selector.xpath('//*[@id="_container_bid"]/table/tbody/tr/td[3]/a/text()')
+            person = selector.xpath('//*[@id="_container_bid"]/table/tbody/tr/td[4]/text()')
+            Bidding = {
+                'tm': tm,
+                'title': title,
+                'person': person
+            }
+            Bidding_data = DataFrame(Bidding)
+        except:
+            pass
+        item.Bidding_data = Bidding_data
+
+        im_ex_credit = DataFrame()
+        try:
+            haiguan = selector.xpath('//*[@id="_container_importAndExport"]/table/tbody/tr/td[1]/text()')
+            haiguanbianma = selector.xpath('//*[@id="_container_importAndExport"]/table/tbody/tr/td[2]/text()')
+            type = selector.xpath('//*[@id="_container_importAndExport"]/table/tbody/tr/td[3]/text()')
+            im_ex = {
+                'haiguan': haiguan,
+                'haiguanbianma': haiguanbianma,
+                'type': type
+            }
+            im_ex_credit = DataFrame(im_ex)
+        except:
+            pass
+        item.im_ex_credit = im_ex_credit
+
+        Trademark_data = DataFrame()
+        try:
+            reg_tm = selector.xpath('//*[@id="_container_tmInfo"]/div[2]/table/tbody/tr/td[2]/span/text()')
+            name = selector.xpath('//*[@id="_container_tmInfo"]/div[2]/table/tbody/tr/td[4]/span/text()')
+            reg_id = selector.xpath('//*[@id="_container_tmInfo"]/div[2]/table/tbody/tr/td[5]/span/text()')
+            type = selector.xpath('//*[@id="_container_tmInfo"]/div[2]/table/tbody/tr/td[6]/span/text()')
+            process_state = selector.xpath('//*[@id="_container_tmInfo"]/div[2]/table/tbody/tr/td[7]/span/text()')
+            Trademark = {
+                'reg_tm': reg_tm,
+                'name': name,
+                'reg_id': reg_id,
+                'type': type,
+                'process_state': process_state
+            }
+            Trademark_data = DataFrame(Trademark)
+        except:
+            pass
+        item.Trademark_data=Trademark_data
+
+        Copyright_data = DataFrame()
+        try:
+            tm = selector.xpath('//*[@id="_container_copyright"]/table/tbody/tr/td[2]/span/text()')
+            name = selector.xpath('//*[@id="_container_copyright"]/table/tbody/tr/td[3]/span/text()')
+            abbreviation = selector.xpath('//*[@id="_container_copyright"]/table/tbody/tr/td[4]/span/text()')
+            register = selector.xpath('//*[@id="_container_copyright"]/table/tbody/tr/td[5]/span/text()')
+            type_id = selector.xpath('//*[@id="_container_copyright"]/table/tbody/tr/td[6]/span/text()')
+            version = selector.xpath('//*[@id="_container_copyright"]/table/tbody/tr/td[7]/span/text()')
+            copyright = {
+                'tm': tm,
+                'name': name,
+                'abbreviation': abbreviation,
+                'register': register,
+                'type_id': type_id,
+                'version': version
+            }
+            Copyright_data = DataFrame(copyright)
+        except:
+            pass
+        item.Copyright_data = Copyright_data
+
+        works_data = DataFrame()
+        try:
+            works_name = selector.xpath('//*[@id="_container_copyrightWorks"]/table/tbody/tr/td[2]/span/text()')
+            reg_id = selector.xpath('//*[@id="_container_copyrightWorks"]/table/tbody/tr/td[3]/span/text()')
+            type = selector.xpath('//*[@id="_container_copyrightWorks"]/table/tbody/tr/td[4]/span/text()')
+            complete_date = selector.xpath('//*[@id="_container_copyrightWorks"]/table/tbody/tr/td[5]/span/text()')
+            red_date = selector.xpath('//*[@id="_container_copyrightWorks"]/table/tbody/tr/td[6]/span/text()')
+            first_date = selector.xpath('//*[@id="_container_copyrightWorks"]/table/tbody/tr/td[7]/span/text()')
+            works = {
+                'works_name': works_name,
+                'reg_id': reg_id,
+                'type': type,
+                'complete_date': complete_date,
+                'red_date': red_date,
+                'first_date': first_date
+            }
+            works_data = DataFrame(works)
+        except:
+            pass
+        item.works_data = works_data
+
+        Record_data = DataFrame()
+        try:
+            examine_tm = selector.xpath('//*[@id="_container_icp"]/table/tbody/tr/td[2]/span/text()')
+            website_name = selector.xpath('//*[@id="_container_icp"]/table/tbody/tr/td[3]/span/text()')
+            host_page = selector.xpath('//*[@id="_container_icp"]/table/tbody/tr/td[4]/a/@href')
+            domain_name = selector.xpath('//*[@id="_container_icp"]/table/tbody/tr/td[5]/text()')
+            record = selector.xpath('//*[@id="_container_icp"]/table/tbody/tr/td[6]/span/text()')
+            status = selector.xpath('//*[@id="_container_icp"]/table/tbody/tr/td[7]/span/text()')
+            nature = selector.xpath('//*[@id="_container_icp"]/table/tbody/tr/td[8]/span/text()')
+            record_d = {
+                'examine_tm': examine_tm,
+                'website_name': website_name,
+                'host_page': host_page,
+                'domain_name': domain_name,
+                'record': record,
+                'status': status,
+                'nature': nature
+            }
+            Record_data = DataFrame(record_d)
+        except:
+            pass
+        item.Record_data = Record_data
+
+        item.zhuceshijian = ''
+        try:
+            item.zhuceshijian = regtm.split("至")[0]
+        except:
+            pass
+        try:
+            item.jianjie = jianjie[0].strip()
+        except:
+            pass
+        item.diqu =''
+        item.tongyixinyongdaima = '-'
+        item.faren = str(faren)[2:-2]
+        item.phone = str(phone)[2:-2]
+        item.email = str(email)[2:-2]
+        item.guanwang = str(guanwang)[2:-2]
+        item.dizhi = str(dizhi)[2:-2]
+        item.gongshangzhuce = str(gongshangzhuce)[2:-2]
+        item.zuzhijigoudaima = str(zuzhijigoudaima)[2:-2]
+        item.tongyixinyongdaima = str(tongyixinyongdaima)[2:-2]
+        item.comp_type = str(comp_type)[2:-2]
+        item.hangye = str(hangye)[2:-2]
+        item.jyfw = str(jyfw)[2:-2]
+        item.zhucedizhi = str(zhucedizhi)[2:-2]
+        item.dengjijiguan = str(dengjijiguan)[2:-2]
+        item.yingwenming = str(yingwenming)[2:-2]
+        item.product_des = str(product_des)[2:-2]
+        return item
+
+
+if __name__ == '__main__':
+    t = Tianyancah("阿里巴巴（中国）网络技术有限公司")
+    item = t.get_list()
+    mainper = []
+    sh = []
+    inv = []
+    branch = []
+    changeData = []
+    judicial_risk_data = []
+    legal_proceedings_data = []
+    announcement = []
+    business = []
+    inveEvent = []
+    financing = []
+    administrativeLicensing = []
+    qualificationCertificate = []
+    biddingData = []
+    im_ex_credit = []
+    trademarkData = []
+    copyrightData = []
+    worksData = []
+    recordData = []
+    taxData = []
+    try:
+        for i in range(0,item.main_per_data.shape[0]):
+            ma = {
+            'personName': item.main_per_data.loc[i].main_per_name,
+            'position': item.main_per_data.loc[i].main_per_posit
+            }
+            ma = json.dumps(ma,ensure_ascii=False)
+            mainper.append(ma)
+    except:
+        pass
+    try:
+        for i in range(0,item.share_data.shape[0]):
+            share = {
+                'shareholderName ':item.share_data.loc[i].share_name,
+                'proportion':item.share_data.loc[i].share_proportion,
+                'contributive ':item.share_data.loc[i].share_contributive,
+                'contributiveTm':item.share_data.loc[i].share_contributive_tm,
+            }
+            share = json.dumps(share,ensure_ascii=False)
+            sh.append(share)
+    except:
+        pass
+    try:
+        for i in range(0,item.invest_data.shape[0]):
+            invest = {
+                'corpName':item.invest_data.loc[i].name_corp,
+                'legalPerson':item.invest_data.loc[i].btzper,
+                'capital':item.invest_data.loc[i].reg_zb,
+                'investmentRatio':item.invest_data.loc[i].invest_bl,
+                'regTm':item.invest_data.loc[i].reg_tm,
+                'status':item.invest_data.loc[i].status,
+            }
+            invest = json.dumps(invest,ensure_ascii=False)
+            inv.append(invest)
+    except:
+        pass
+    try:
+        for i in range(0,item.fenzhi_data.shape[0]):
+            fz = {
+                'corpName' :item.fenzhi_data.loc[i].corp_name,
+                'person':item.fenzhi_data.loc[i].fzren,
+                'regTm':item.fenzhi_data.loc[i].reg_time,
+                'status':item.fenzhi_data.loc[i].fz_status
+            }
+            fz = json.dumps(fz,ensure_ascii=False)
+            branch.append(fz)
+    except:
+        pass
+    try:
+        for i in range(0,item.change_data.shape[0]):
+            change = {
+                'changeTm ':item.change_data.loc[i].change_tm,
+                'changeProject ':item.change_data.loc[i].change_project,
+                'changeBe ':item.change_data.loc[i].change_be,
+                'changeAf ':item.change_data.loc[i].change_af,
+            }
+            change = json.dumps(change,ensure_ascii=False)
+            changeData.append(change)
+    except:
+        pass
+    try:
+        for i in range(0,item.Judicial_risk_data.shape[0]):
+            # Judicial_risk_data
+            judicial = {
+                'holdCourtTm':item.Judicial_risk_data.loc[i].hold_court_tm,
+                'case':item.Judicial_risk_data.loc[i].Case,
+                'person':item.Judicial_risk_data.loc[i].person,
+                'bgr':item.Judicial_risk_data.loc[i].bgr,
+            }
+            judicial = json.dumps(judicial,ensure_ascii=False)
+            judicial_risk_data.append(judicial)
+    except:
+        pass
+    try:
+        for i in range(0,item.legal_proceedings_data.shape[0]):
+            legal_proceedings = {
+                'tm': item.legal_proceedings_data.loc[i].tm,
+                'documents':item.legal_proceedings_data.loc[i].documents,
+                'case':item.legal_proceedings_data.loc[i].case,
+                'ci': item.legal_proceedings_data.loc[i].ci,
+                'caseNum': item.legal_proceedings_data.loc[i].case_num
+            }
+            legal_proceedings = json.dumps(legal_proceedings,ensure_ascii=False)
+            legal_proceedings_data.append(legal_proceedings)
+    except:
+        pass
+    try:
+        for i in range(0,item.announcement_data.shape[0]):
+            announcement_data = {
+                'tm': item.announcement_data.loc[i].tm,
+                'ssf': item.announcement_data.loc[i].ssf,
+                'bsf': item.announcement_data.loc[i].bsf,
+                'beigaoleixing': item.announcement_data.loc[i].beigaoleixing,
+                'court': item.announcement_data.loc[i].court
+            }
+            announcement_data = json.dumps(announcement_data,ensure_ascii=False)
+            announcement.append(announcement_data)
+    except:
+        pass
+    try:
+        for i in range(0,item.Business_data.shape[0]):
+            business_data = {
+                'businessName': item.Business_data.loc[i].business_name,
+                'type': item.Business_data.loc[i].type,
+                'desc': item.Business_data.loc[i].desc,
+                'busKeywords': item.Business_data.loc[i].bus_des,
+                'busDes':item.Business_data.loc[i].bus_keywords,
+                'regTm': item.Business_data.loc[i].reg_tm,
+                'territoriality':item.Business_data.loc[i].Territoriality,
+            }
+            business_data = json.dumps(business_data,ensure_ascii=False)
+            business.append(business_data)
+    except:
+        pass
+    try:
+        for i in range(0,item.inve_event_data.shape[0]):
+            inve_event_data = {
+                'tm': item.inve_event_data.loc[i].tm,
+                'lunci': item.inve_event_data.loc[i].lunci,
+                'jine': item.inve_event_data.loc[i].jine,
+                'tzf': item.inve_event_data.loc[i].tzf,
+                'product': item.inve_event_data.loc[i].product,
+                'diqu':item.inve_event_data.loc[i].diqu,
+                'ins': item.inve_event_data.loc[i].ins,
+                'busi': item.inve_event_data.loc[i].busi,
+            }
+            inve_event_data = json.dumps(inve_event_data,ensure_ascii=False)
+            inveEvent.append(inve_event_data)
+    except:
+        pass
+    try:
+        for i in range(0,item.Financing_data.shape[0]):
+            financingData = {
+                'tm':item.Financing_data.loc[i].tm,
+                'rotation': item.Financing_data.loc[i].rotation,
+                'valuation': item.Financing_data.loc[i].valuation,
+                'AmountOfMoney': item.Financing_data.loc[i].Amount_of_money,
+                'bili': item.Financing_data.loc[i].bili,
+                'investors': item.Financing_data.loc[i].Investors,
+                'newslys':item.Financing_data.loc[i].newslys
+            }
+            financingData = json.dumps(financingData,ensure_ascii=False)
+            financing.append(financingData)
+    except:
+        pass
+    try:
+        for i in range(0,item.administrative_licensing_data.shape[0]):
+            administrative_licensing_data = {
+                'xukebianhao': item.administrative_licensing_data.loc[i].xukebianhao,
+                'xukename': item.administrative_licensing_data.loc[i].xukename,
+                'youxiaoqizi': item.administrative_licensing_data.loc[i].youxiaoqizi,
+                'youxiaoqizhi': item.administrative_licensing_data.loc[i].youxiaoqizhi,
+                'xukejiguan': item.administrative_licensing_data.loc[i].xukejiguan,
+                'xukeneirong': item.administrative_licensing_data.loc[i].xukeneirong,
+            }
+            administrative_licensing_data = json.dumps(administrative_licensing_data,ensure_ascii=False)
+            administrativeLicensing.append(administrative_licensing_data)
+    except:
+        pass
+    try:
+        for i in range(0,item.Tax_data.shape[0]):
+            tax = {
+                'tm': item.Tax_data.loc[i].tm,
+                'taxRating': item.Tax_data.loc[i].tax_rating,
+                'type': item.Tax_data.loc[i].type,
+                'TaxpayerId': item.Tax_data.loc[i].Taxpayer_id,
+                'evaluationUnit':item.Tax_data.loc[i].evaluation_unit
+            }
+            tax = json.dumps(tax,ensure_ascii=False)
+            taxData.append(tax)
+
+    except:
+        pass
+    try:
+        for i in range(0,item.Qualification_certificate.shape[0]):
+            qualification_Certificate = {
+                'certificate': item.Qualification_certificate.loc[i].certificate,
+                'certificateId': item.Qualification_certificate.loc[i].certificate_id,
+                'fazhengriqi': item.Qualification_certificate.loc[i].fazhengriqi,
+                'jiezhiriqi':item.Qualification_certificate.loc[i].jiezhiriqi,
+            }
+            qualification_Certificate = json.dumps(qualification_Certificate,ensure_ascii=False)
+            qualificationCertificate.append(qualification_Certificate)
+    except:
+        pass
+    try:
+        for i in range(0,item.Bidding_data.shape[0]):
+            Bidding_Data = {
+                'tm': item.Bidding_data.loc[i].tm,
+                'title': item.Bidding_data.loc[i].title,
+                'person': item.Bidding_data.loc[i].person,
+            }
+            Bidding_Data = json.dumps(Bidding_Data,ensure_ascii=False)
+            biddingData.append(Bidding_Data)
+    except:
+        pass
+    try:
+        for i in range(0,item.im_ex_credit.shape[0]):
+            im_ex = {
+                'haiguan': item.im_ex_credit.loc[i].haiguan,
+                'haiguanbianma':item.im_ex_credit.loc[i].haiguanbianma,
+                'type':item.im_ex_credit.loc[i].type,
+            }
+            im_ex = json.dumps(im_ex_credit,ensure_ascii=False)
+            im_ex_credit.append(im_ex)
+    except:
+        pass
+    try:
+        for i in range(0,item.Trademark_data.shape[0]):
+            Trademark_data = {
+                'regTm': item.Trademark_data.loc[i].reg_tm,
+                'name': item.Trademark_data.loc[i].name,
+                'regId': item.Trademark_data.loc[i].reg_id,
+                'type': item.Trademark_data.loc[i].type,
+                'processState': item.Trademark_data.loc[i].process_state,
+            }
+            Trademark_data = json.dumps(Trademark_data,ensure_ascii=False)
+            trademarkData.append(Trademark_data)
+    except:
+        pass
+    try:
+        for i in range(0,item.Copyright_data.shape[0]):
+            Copyright_data = {
+                'tm': item.Copyright_data.loc[i].tm,
+                'name': item.Copyright_data.loc[i].name,
+                'abbreviation':item.Copyright_data.loc[i].abbreviation,
+                'register':item.Copyright_data.loc[i].register,
+                'typeId': item.Copyright_data.loc[i].type_id,
+                'version':item.Copyright_data.loc[i].lversion
+            }
+            Copyright_data = json.dumps(Copyright_data,ensure_ascii=False)
+            copyrightData.append(Copyright_data)
+    except:
+        pass
+    try:
+        for i in range(0,item.works_data.shape[0]):
+            works_data = {
+                'worksName': list(item.works_data.iloc[:,0].values),
+                'regId': list(item.works_data.iloc[:,1].values),
+                'type': list(item.works_data.iloc[:,2].values),
+                'completeDate': list(item.works_data.iloc[:,3].values),
+                'redDate': list(item.works_data.iloc[:,4].values),
+                'firstDate': list(item.works_data.iloc[:,5].values)
+            }
+            works_data = json.dumps(works_data,ensure_ascii=False)
+            worksData.append(works_data)
+    except:
+        pass
+    try:
+        for i in range(0,item.Record_data.shape[0]):
+            Record_data = {
+                'examineTm':  item.Record_data.loc[i].examine_tm,
+                'websiteName':  item.Record_data.loc[i].website_name,
+                'hostNage':  item.Record_data.loc[i].host_page,
+                'domainName': item.Record_data.loc[i].domain_name,
+                'record': item.Record_data.loc[i].record,
+                'status': item.Record_data.loc[i].status,
+                'nature': item.Record_data.loc[i].nature
+            }
+            Record_data = json.dumps(Record_data,ensure_ascii=False)
+            recordData.append(Record_data)
+    except:
+        pass
+
+    comp = {
+        'companyName ': item.name,
+        'corpCode ': item.tongyixinyongdaima,
+        'corpType ': item.comp_type,
+        'corpDesc ': item.jianjie,
+        'legalPerson ': item.faren,
+        'Phone ': item.phone,
+        'Email ': item.email,
+        'corpHomePage ': item.guanwang,
+        'address ': item.dizhi,
+        'area ': item.diqu,
+        'regTm ': item.zhuceshijian,
+        'industry ': item.hangye,
+        'scopeOfBusiness ': item.jyfw,
+        'corpProduct':item.product,
+        'corpKeywords':item.keyword,
+        'corpProduct_Desc':item.product_des,
+        'updateTm ': str(datetime.datetime.now())[:-3],
+        'mainPerson':mainper,
+        'share':sh,
+        'invest':inv,
+        'branch':branch,
+        'changeData':changeData,
+        'judicialRiskData':judicial_risk_data,
+        'legalProceedings':legal_proceedings_data,
+        'announcement':announcement,
+        'business':business,
+        'inveEvent':inveEvent,
+        'financing':financing,
+        'administrativeLicensing':administrativeLicensing,
+        'taxData':taxData,
+        'qualificationCertificate':qualificationCertificate,
+        'biddingData':biddingData,
+        'imExCredit':im_ex_credit,
+        'trademarkData':trademarkData,
+        'copyrightData':copyrightData,
+        'worksData':worksData,
+        'recordData':recordData
+    }
+    # print(item.name)
+    data = json.dumps(comp, ensure_ascii=False)
+    print(data)
+
+
+
+
